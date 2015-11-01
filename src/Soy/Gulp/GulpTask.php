@@ -14,12 +14,12 @@ class GulpTask extends AbstractCliTask
     /**
      * @var string
      */
-    private $tasks = ['default'];
+    protected $tasks = ['default'];
 
     /**
      * @var array
      */
-    private $flags = [];
+    protected $flags = [];
 
     /**
      * @param string $task
