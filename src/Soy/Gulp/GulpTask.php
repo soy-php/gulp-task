@@ -2,9 +2,9 @@
 
 namespace Soy\Gulp;
 
-use Soy\Task\AbstractCliTask;
+use Soy\Task\CliTask;
 
-class GulpTask extends AbstractCliTask
+class GulpTask extends CliTask
 {
     /**
      * @var string
@@ -15,11 +15,6 @@ class GulpTask extends AbstractCliTask
      * @var string
      */
     protected $tasks = ['default'];
-
-    /**
-     * @var array
-     */
-    protected $flags = [];
 
     /**
      * @param string $task
@@ -52,34 +47,14 @@ class GulpTask extends AbstractCliTask
     }
 
     /**
-     * @param string $flag
-     * @return $this
-     */
-    public function addFlag($flag)
-    {
-        $this->flags[] = $flag;
-        return $this;
-    }
-
-    /**
-     * @param array $flags
-     * @return $this
-     */
-    public function setFlags(array $flags)
-    {
-        $this->flags = $flags;
-        return $this;
-    }
-
-    /**
      * @return string
      */
-    public function getBinary()
+    public function getCommand()
     {
-        $command = parent::getBinary() . ' ' . implode(' ', $this->tasks);
+        $command = $this->getBinary() . ' ' . implode(' ', $this->tasks);
 
-        if (count($this->flags) > 0) {
-            $command .= ' ' . implode(' ', $this->flags);
+        if (count($this->getArguments()) > 0) {
+            $command .= ' ' . implode(' ', $this->getArguments());
         }
 
         return $command;
