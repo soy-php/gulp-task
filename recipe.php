@@ -2,15 +2,12 @@
 
 $recipe = new \Soy\Recipe();
 
-$recipe->component('gulp', function (\Soy\Gulp\GulpTask $gulpTask) {
+$recipe->component('default', function (\Soy\Gulp\GulpTask $gulpTask) {
     $gulpTask
-        ->setBinary('echo')
         ->setTask('scss')
-        ->addFlag('--type local')
+        ->addArgument('--type local')
         ->setVerbose(true)
         ->run();
 });
-
-$recipe->component('default', null, ['gulp']);
 
 return $recipe;
