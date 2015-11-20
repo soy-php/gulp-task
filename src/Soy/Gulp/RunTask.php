@@ -4,7 +4,7 @@ namespace Soy\Gulp;
 
 use Soy\Task\CliTask;
 
-class GulpTask extends CliTask
+class RunTask extends CliTask
 {
     /**
      * @var string

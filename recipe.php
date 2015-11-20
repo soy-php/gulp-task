@@ -2,7 +2,7 @@
 
 $recipe = new \Soy\Recipe();
 
-$recipe->component('default', function (\Soy\Gulp\GulpTask $gulpTask) {
+$recipe->component('default', function (\Soy\Gulp\RunTask $gulpTask) {
     $gulpTask
         ->setTask('scss')
         ->addArgument('--type local')

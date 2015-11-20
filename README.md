@@ -19,7 +19,7 @@ Then in your recipe you can use the task as follows:
 
 $recipe = new \Soy\Recipe();
 
-$recipe->component('default', function (\Soy\Task\GulpTask $gulpTask) {
+$recipe->component('default', function (\Soy\Gulp\RunTask $gulpTask) {
     $gulpTask
         ->setTask('scss')
         ->run();
