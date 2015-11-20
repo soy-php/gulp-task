@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/soy-php/gulp-task/v/stable)](https://packagist.org/packages/soy-php/gulp-task) [![Total Downloads](https://poser.pugx.org/soy-php/gulp-task/downloads)](https://packagist.org/packages/soy-php/gulp-task) [![Latest Unstable Version](https://poser.pugx.org/soy-php/gulp-task/v/unstable)](https://packagist.org/packages/soy-php/gulp-task) [![License](https://poser.pugx.org/soy-php/gulp-task/license)](https://packagist.org/packages/soy-php/gulp-task)
 
 ## Introduction
-This is a [gulp](http://gulpjs.com/) task for Soy
+This is a [gulp](http://gulpjs.com/) task for [Soy](https://github.com/soy-php/soy)
 
 ## Usage
 Include `soy-php/gulp-task` in your project with composer:
